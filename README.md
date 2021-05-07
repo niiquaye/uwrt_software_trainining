@@ -14,7 +14,8 @@ the creation of pubs/subs, services/clients, action servers, multi-threaded call
 
 **Write 6 components that do the following:**
 1. Clears any existing turtles
-2. Spawns a turtle named "stationary_turtle" at x = 5, y = 5
+2. Create a component that moves 'turtle1' in a circular motion
+3. Spawns a turtle named "stationary_turtle" at x = 5, y = 5
    Spawns a second turtle named "moving_turtle" at x = 25, y = 10
 4. Create a service that resets the "moving_turtle" to its starting position. The service response should be whether or not it was successful.
 5. Create a publisher that publishes a custom msg. This custom msgs should have 3 integer fields that correspond with the x and y distances of "stationary_turtle" to "moving turtle", as well as the distance between the two turtles.
