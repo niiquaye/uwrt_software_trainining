@@ -4,7 +4,7 @@ The current working solution of the software training.
 The use of the turtlesim package is needed to complete this training.
 The training covers core concepts of ROS2 such as 
 components, topic statistic, callback groups, extending rclcpp::Node, and 
-the creation of pubs/subs, services/clients, action servers.
+the creation of pubs/subs, services/clients, action servers, multi-threaded callbacks.
 **Still a few bugs that need to be fixed**
 
 
@@ -22,3 +22,4 @@ the creation of pubs/subs, services/clients, action servers.
 6. Create an action that moves "moving_turtle" to a waypoint in a straight line by publishing geometry_msgs/Twist msgs to turtleX/cmd_vel.The action's goal cd is an   absolute position of the waypoint, feedback is distance to the goal, and result is the time it took to reach the goal. You should define a custom action file. 
 
 
+**This training is still in the works, but the solution is almost done**
