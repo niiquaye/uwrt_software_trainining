@@ -1,10 +1,14 @@
 # uwrt_software_trainining
 
-The current working solution of the software training.
-The use of the turtlesim package is needed to complete this training. https://docs.ros.org/en/foxy/Tutorials/Turtlesim/Introducing-Turtlesim.html
-The training covers core concepts of ROS2 such as 
+This is a solution of the software training with some added bugs that discourages one from copying and pasting the code. This code is meant to 
+serve as a guide to those starting out the training. It makes use of some ROS2 concepts not covered in the training as it is meant to encourage you to 
+go out and learn different features of ROS2.
+
+This code covers core concepts of ROS2 such as 
 components, topic statistic, callback groups, extending rclcpp::Node, and 
 the creation of pubs/subs, services/clients, action servers, multi-threaded callbacks.
+
+The use of the turtlesim package is needed to complete this training. https://docs.ros.org/en/foxy/Tutorials/Turtlesim/Introducing-Turtlesim.html
 
 **The training challenge consists of the following:**
 
@@ -19,6 +23,7 @@ the creation of pubs/subs, services/clients, action servers, multi-threaded call
 5. Create a publisher that publishes a custom msg. This custom msgs should have 3 integer fields that correspond with the x and y distances of "stationary_turtle" to "moving turtle", as well as the distance between the two turtles.
 
 6. Create an action that moves "moving_turtle" to a waypoint in a straight line by publishing geometry_msgs/Twist msgs to turtleX/cmd_vel.The action's goal cd is an   absolute position of the waypoint, feedback is distance to the goal, and result is the time it took to reach the goal. You should define a custom action file. 
-7. Create a launch file that will start up all the components and the turtlesim node (configure the parameters of the turtlesim node to however you see fit). Ensure that the turtlesim node is launched first as the other components are dependent upon it. 
+
+Lastly, create a launch file that will start up all the components and the turtlesim node (configure the parameters of the turtlesim node to however you see fit). Ensure that the turtlesim node is launched first as the other components are dependent upon it. 
 
 
