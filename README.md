@@ -14,7 +14,7 @@ The use of the turtlesim package is needed to complete this training. https://do
 
 **That training relies heavily on components as this is the newer and better way to go about ROS2 design**
 
-**Write 6 components that do the following:**
+**Write 6 components that do the following: (Note: Some of the components do not need to be made in the following order)**
 1. Clears any existing turtles
 2. Create a component that moves 'turtle1' in a circular motion
 3. Spawns a turtle named "stationary_turtle" at x = 5, y = 5
