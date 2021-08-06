@@ -18,7 +18,7 @@ cmd_vel_moving_turt_publisher::cmd_vel_moving_turt_publisher(
     message->angular.y = cmd_vel_moving_turt_publisher::coordinates::angular::y;
     message->angular.z = cmd_vel_moving_turt_publisher::coordinates::angular::z;
 
-    publisher->publish(std::move(message));
+    this->publisher->publish(std::move(message));
   };
 
   // create publisher
