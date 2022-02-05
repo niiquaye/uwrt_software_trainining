@@ -1,14 +1,16 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>software_training</name>
+  <name>software_training_assignment</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
-  <maintainer email="omarmon@uwaterloo.ca">niiquaye</maintainer>
+  <description>Software training assignment done by Colin Toft</description>
+  <maintainer email="ctoft@uwaterloo.ca">Colin Toft</maintainer>
   <license>TODO: License declaration</license>
 
+  <depend>action_msgs</depend>
+
   <buildtool_depend>ament_cmake</buildtool_depend>
-  
+  <buildtool_depend>rosidl_default_generators</buildtool_depend>
 
   <build_depend>rclcpp_components</build_depend>
   <build_depend>rclcpp</build_depend>
