@@ -7,7 +7,11 @@
 
 class circular_turtle : public rclcpp:Node {
     public: 
-        circular_turtle();
+        circular_turtle(const rclcpp::NodeOptions &options);
     private:
-    
+        rclcpp::Client<turtlesim::srv::Spawn> client;
+        rclcpp::Client<turtlesim::srv::Spawn>::SharedRequest sharedReq;
+        rclcpp::timer::WallTimer timer_cb;
+
+
 }
