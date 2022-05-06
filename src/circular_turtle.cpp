@@ -16,5 +16,6 @@ void spawn() {
         std::cout << "made turtle1";
     }
     client.send_async_request(sharedReq, callback);
+    
     //moving a turtle needs a pub/sub relationship
 }

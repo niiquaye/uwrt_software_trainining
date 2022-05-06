@@ -12,6 +12,7 @@ class circular_turtle : public rclcpp:Node {
         rclcpp::Client<turtlesim::srv::Spawn> client;
         rclcpp::Client<turtlesim::srv::Spawn>::SharedRequest sharedReq;
         rclcpp::timer::WallTimer timer_cb;
+        rclcpp::Publisher<std_msgs::msg::String>::SharedPtr publisher;
 
 
 }
