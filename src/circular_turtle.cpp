@@ -18,4 +18,5 @@ void spawn() {
     client.send_async_request(sharedReq, callback);
     
     //moving a turtle needs a pub/sub relationship
+    
 }

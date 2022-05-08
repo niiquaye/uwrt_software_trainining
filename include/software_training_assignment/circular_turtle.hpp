@@ -12,7 +12,8 @@ class circular_turtle : public rclcpp:Node {
         rclcpp::Client<turtlesim::srv::Spawn> client;
         rclcpp::Client<turtlesim::srv::Spawn>::SharedRequest sharedReq;
         rclcpp::timer::WallTimer timer_cb;
-        rclcpp::Publisher<std_msgs::msg::String>::SharedPtr publisher;
-
+        rclcpp::Publisher<turtlesim::pub::Pose> publisher;
+        rclcpp::Publisher<turtlesim::pub::Pose>::SharedRequest sharedReq2;
+        //need to figure out how to publish a message to turtle1 outlining its angular velocity and all that
 
 }
