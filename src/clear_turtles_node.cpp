@@ -21,8 +21,7 @@ void clear_turtles_node::kill() {
         auto callback = []{
             std::cout << "finished" << std::endl;
         }
-        client.async_send_request(sharedReq, callback);
-        sharedReq2 = std::make_shared<rclcpp::Publisher<turtlesim::pub::Pose>::SharedRequest>(0, 0, 0, 3, 3);
+        
         
     }
 
