@@ -9,7 +9,7 @@ circular_turtle::circular_turtle(const rclcpp::NodeOptions &options) {
 
     //create a service
     
-    client = create_client<turtlesim::srv::Spawn>("/spawn");
+    
     
     timer_cb = create_wall_timer(2s, std::bind(rotate, this)); //turns the function into a function pointer
 }
@@ -24,6 +24,7 @@ void rotate() {
 
     //moving a turtle needs a pub/sub relationship
     //need to create a publisher that publishes the velocity message to the turtle sim subscriber
-    
+    publisher = create_publisher<geometry_msgs::msg::Twist>("topic", 10);
+    publisher -> publish(vel_msg); //should make the turtle run in a circle lmao
     
 }

@@ -8,9 +8,9 @@
 class Vel_msg {
     class Velocity {
         private:
-            int x,
-            int y,
-            int z
+            _Float64 x,
+            _Float64 y,
+            _Float64 z
     }
     public:
        Velocity linear;
@@ -23,8 +23,7 @@ class circular_turtle : public rclcpp:Node {
         circular_turtle(const rclcpp::NodeOptions &options);
     private:
         rclcpp::timer::WallTimer timer_cb;
-        rclcpp::Publisher<turtlesim::pub::Twist> publisher;
-        rclcpp::Publisher<turtlesim::pub::Pose>::SharedRequest sharedReq2;
+        rclcpp::Publisher<geometry_msgs::msg::Twist>* publisher;
         //need to figure out how to publish a message to turtle1 outlining its angular velocity and all that
         Vel_msg Vel_msg;
 
