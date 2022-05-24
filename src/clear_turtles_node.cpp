@@ -22,7 +22,7 @@ void clear_turtles_node::kill() {
             std::cout << "finished" << std::endl;
         }
         
-        
+        client -> async_send_request(sharedReq, callback);
     }
 
 }

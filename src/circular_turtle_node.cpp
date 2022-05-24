@@ -8,9 +8,6 @@ circular_turtle::circular_turtle(const rclcpp::NodeOptions &options) {
     //if this gets called then 
 
     //create a service
-    
-    
-    
     timer_cb = create_wall_timer(2s, std::bind(rotate, this)); //turns the function into a function pointer
 }
 
