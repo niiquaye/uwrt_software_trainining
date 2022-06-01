@@ -1,0 +1,27 @@
+[0.012s] Invoking command in '/home/andrew/ros2_dev_ws/src/software_training_assignment/build/software_training_assignment': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/andrew/ros2_dev_ws/src/software_training_assignment/build/software_training_assignment -- -j12 -l12
+[0.027s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.046s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.046s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.172s] -- Found rclcpp: 2.4.1 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.197s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.200s] -- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.296s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.334s] -- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.335s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.451s] CMake Error at CMakeLists.txt:30 (find_package):
+[0.451s]   find_package called with invalid argument "rosidl_default_generators"
+[0.451s] 
+[0.451s] 
+[0.451s] CMake Error at /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:93 (message):
+[0.451s]   rosidl_generate_interfaces() the passed file 'action/MOVING_TURTLE.action'
+[0.451s]   doesn't exist relative to the CMAKE_CURRENT_SOURCE_DIR
+[0.451s]   '/home/andrew/ros2_dev_ws/src/software_training_assignment'
+[0.451s] Call Stack (most recent call first):
+[0.451s]   CMakeLists.txt:31 (rosidl_generate_interfaces)
+[0.451s] 
+[0.451s] 
+[0.452s] -- Configuring incomplete, errors occurred!
+[0.452s] See also "/home/andrew/ros2_dev_ws/src/software_training_assignment/build/software_training_assignment/CMakeFiles/CMakeOutput.log".
+[0.452s] See also "/home/andrew/ros2_dev_ws/src/software_training_assignment/build/software_training_assignment/CMakeFiles/CMakeError.log".
+[0.456s] make: *** [Makefile:222: cmake_check_build_system] Error 1
+[0.458s] Invoked command in '/home/andrew/ros2_dev_ws/src/software_training_assignment/build/software_training_assignment' returned '2': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/andrew/ros2_dev_ws/src/software_training_assignment/build/software_training_assignment -- -j12 -l12

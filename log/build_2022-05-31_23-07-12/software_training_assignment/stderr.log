@@ -1,0 +1,9 @@
+CMake Error at CMakeLists.txt:30 (find_package):
+  find_package called with invalid argument "rosidl_default_generators"
+
+
+CMake Error at CMakeLists.txt:40 (ament_lint_auto_find_test_dependencies):
+  Unknown CMake command "ament_lint_auto_find_test_dependencies".
+
+
+make: *** [Makefile:222: cmake_check_build_system] Error 1

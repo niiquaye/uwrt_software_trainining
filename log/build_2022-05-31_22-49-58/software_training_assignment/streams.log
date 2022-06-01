@@ -1,0 +1,22 @@
+[0.029s] Invoking command in '/home/andrew/ros2_dev_ws/src/software_training_assignment/build/software_training_assignment': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/andrew/ros2_dev_ws/src/software_training_assignment/build/software_training_assignment -- -j12 -l12
+[0.084s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.110s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.277s] -- Found rclcpp: 2.4.1 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.322s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.328s] -- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.456s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.510s] -- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.511s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.646s] CMake Error at CMakeLists.txt:30 (find_package):
+[0.647s]   find_package called with invalid argument "rosidl_default_generators"
+[0.647s] 
+[0.647s] 
+[0.647s] CMake Error at CMakeLists.txt:31 (rosidl_genereate_interfaces):
+[0.647s]   Unknown CMake command "rosidl_genereate_interfaces".
+[0.647s] 
+[0.647s] 
+[0.647s] -- Configuring incomplete, errors occurred!
+[0.647s] See also "/home/andrew/ros2_dev_ws/src/software_training_assignment/build/software_training_assignment/CMakeFiles/CMakeOutput.log".
+[0.647s] See also "/home/andrew/ros2_dev_ws/src/software_training_assignment/build/software_training_assignment/CMakeFiles/CMakeError.log".
+[0.651s] make: *** [Makefile:222: cmake_check_build_system] Error 1
+[0.653s] Invoked command in '/home/andrew/ros2_dev_ws/src/software_training_assignment/build/software_training_assignment' returned '2': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/andrew/ros2_dev_ws/src/software_training_assignment/build/software_training_assignment -- -j12 -l12

@@ -1,0 +1,74 @@
+[0.000000] (-) TimerEvent: {}
+[0.000485] (software_training_assignment) JobQueued: {'identifier': 'software_training_assignment', 'dependencies': OrderedDict()}
+[0.000550] (software_training_assignment) JobStarted: {'identifier': 'software_training_assignment'}
+[0.007568] (software_training_assignment) JobProgress: {'identifier': 'software_training_assignment', 'progress': 'cmake'}
+[0.008050] (software_training_assignment) JobProgress: {'identifier': 'software_training_assignment', 'progress': 'build'}
+[0.008629] (software_training_assignment) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/andrew/ros2_dev_ws/src/software_training_assignment/build/software_training_assignment', '--', '-j12', '-l12'], 'cwd': '/home/andrew/ros2_dev_ws/src/software_training_assignment/build/software_training_assignment', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_CA:en'), ('USER', 'andrew'), ('SSH_AGENT_PID', '1897'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/andrew'), ('OLDPWD', '/home/andrew/ros2_dev_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1670'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'andrew'), ('JOURNAL_STREAM', '8:63611'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'andrew'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/andrew/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/andrew-MS-7A40:@/tmp/.ICE-unix/1932,unix/andrew-MS-7A40:/tmp/.ICE-unix/1932'), ('INVOCATION_ID', 'a867ae5d2ff048329147e0106c41ea9e'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/eb252777_bfe2_4329_b27d_747b6bb35510'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.356'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '11'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/andrew/ros2_dev_ws/src/software_training_assignment/build/software_training_assignment'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.029102] (software_training_assignment) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[0.049114] (software_training_assignment) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[0.049339] (software_training_assignment) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.099693] (-) TimerEvent: {}
+[0.175067] (software_training_assignment) StdoutLine: {'line': b'-- Found rclcpp: 2.4.1 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[0.198907] (software_training_assignment) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.199759] (-) TimerEvent: {}
+[0.201443] (software_training_assignment) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[0.299866] (-) TimerEvent: {}
+[0.309032] (software_training_assignment) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.346625] (software_training_assignment) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[0.347668] (software_training_assignment) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.399939] (-) TimerEvent: {}
+[0.462367] (software_training_assignment) StderrLine: {'line': b'CMake Error at CMakeLists.txt:30 (find_package):\n'}
+[0.462565] (software_training_assignment) StderrLine: {'line': b'  find_package called with invalid argument "rosidl_default_generators"\n'}
+[0.462666] (software_training_assignment) StderrLine: {'line': b'\n'}
+[0.462758] (software_training_assignment) StderrLine: {'line': b'\n'}
+[0.477209] (software_training_assignment) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") \n'}
+[0.500015] (-) TimerEvent: {}
+[0.600249] (-) TimerEvent: {}
+[0.600741] (software_training_assignment) StderrLine: {'line': b'CMake Error at /opt/ros/foxy/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:60 (message):\n'}
+[0.600957] (software_training_assignment) StderrLine: {'line': b'  execute_process(/usr/bin/python3 -m rosidl_adapter --package-name\n'}
+[0.601063] (software_training_assignment) StderrLine: {'line': b'  software_training_assignment --arguments-file\n'}
+[0.601166] (software_training_assignment) StderrLine: {'line': b'  /home/andrew/ros2_dev_ws/src/software_training_assignment/build/software_training_assignment/rosidl_adapter__arguments__software_training_assignment.json\n'}
+[0.601307] (software_training_assignment) StderrLine: {'line': b'  --output-dir\n'}
+[0.601405] (software_training_assignment) StderrLine: {'line': b'  /home/andrew/ros2_dev_ws/src/software_training_assignment/build/software_training_assignment/rosidl_adapter/software_training_assignment\n'}
+[0.601499] (software_training_assignment) StderrLine: {'line': b'  --output-file\n'}
+[0.601590] (software_training_assignment) StderrLine: {'line': b'  /home/andrew/ros2_dev_ws/src/software_training_assignment/build/software_training_assignment/rosidl_adapter/software_training_assignment.idls)\n'}
+[0.601681] (software_training_assignment) StderrLine: {'line': b'  returned error code 1:\n'}
+[0.601771] (software_training_assignment) StderrLine: {'line': b'\n'}
+[0.601873] (software_training_assignment) StderrLine: {'line': b'  Traceback (most recent call last):\n'}
+[0.601967] (software_training_assignment) StderrLine: {'line': b'\n'}
+[0.602060] (software_training_assignment) StderrLine: {'line': b'    File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main\n'}
+[0.602152] (software_training_assignment) StderrLine: {'line': b'      return _run_code(code, main_globals, None,\n'}
+[0.602245] (software_training_assignment) StderrLine: {'line': b'    File "/usr/lib/python3.8/runpy.py", line 87, in _run_code\n'}
+[0.602434] (software_training_assignment) StderrLine: {'line': b'      exec(code, run_globals)\n'}
+[0.602552] (software_training_assignment) StderrLine: {'line': b'    File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/__main__.py", line 19, in <module>\n'}
+[0.602704] (software_training_assignment) StderrLine: {'line': b'      sys.exit(main())\n'}
+[0.602809] (software_training_assignment) StderrLine: {'line': b'    File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/main.py", line 53, in main\n'}
+[0.602919] (software_training_assignment) StderrLine: {'line': b'      abs_idl_file = convert_to_idl(\n'}
+[0.603025] (software_training_assignment) StderrLine: {'line': b'    File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/__init__.py", line 29, in convert_to_idl\n'}
+[0.603133] (software_training_assignment) StderrLine: {'line': b'      return convert_action_to_idl(\n'}
+[0.603254] (software_training_assignment) StderrLine: {'line': b'    File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/action/__init__.py", line 28, in convert_action_to_idl\n'}
+[0.603429] (software_training_assignment) StderrLine: {'line': b'      action = parse_action_string(package_name, input_file.stem, content)\n'}
+[0.603540] (software_training_assignment) StderrLine: {'line': b'    File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 892, in parse_action_string\n'}
+[0.603686] (software_training_assignment) StderrLine: {'line': b'      goal_message = parse_message_string(\n'}
+[0.603831] (software_training_assignment) StderrLine: {'line': b'    File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 540, in parse_message_string\n'}
+[0.603974] (software_training_assignment) StderrLine: {'line': b'      msg = MessageSpecification(pkg_name, msg_name, fields, constants)\n'}
+[0.604115] (software_training_assignment) StderrLine: {'line': b'    File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 387, in __init__\n'}
+[0.604256] (software_training_assignment) StderrLine: {'line': b'      self.base_type = BaseType(\n'}
+[0.604400] (software_training_assignment) StderrLine: {'line': b'    File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 204, in __init__\n'}
+[0.604556] (software_training_assignment) StderrLine: {'line': b'      raise InvalidResourceName(\n'}
+[0.604668] (software_training_assignment) StderrLine: {'line': b'\n'}
+[0.604763] (software_training_assignment) StderrLine: {'line': b"  rosidl_adapter.parser.InvalidResourceName: 'MOVING_TURTLE_Goal' is an\n"}
+[0.604856] (software_training_assignment) StderrLine: {'line': b"  invalid message name.  It should have the pattern '^[A-Z][A-Za-z0-9]*$'\n"}
+[0.604952] (software_training_assignment) StderrLine: {'line': b'\n'}
+[0.605044] (software_training_assignment) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.605159] (software_training_assignment) StderrLine: {'line': b'  /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)\n'}
+[0.605272] (software_training_assignment) StderrLine: {'line': b'  CMakeLists.txt:31 (rosidl_generate_interfaces)\n'}
+[0.605368] (software_training_assignment) StderrLine: {'line': b'\n'}
+[0.605463] (software_training_assignment) StderrLine: {'line': b'\n'}
+[0.605556] (software_training_assignment) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[0.605665] (software_training_assignment) StdoutLine: {'line': b'See also "/home/andrew/ros2_dev_ws/src/software_training_assignment/build/software_training_assignment/CMakeFiles/CMakeOutput.log".\n'}
+[0.605763] (software_training_assignment) StdoutLine: {'line': b'See also "/home/andrew/ros2_dev_ws/src/software_training_assignment/build/software_training_assignment/CMakeFiles/CMakeError.log".\n'}
+[0.607362] (software_training_assignment) StderrLine: {'line': b'make: *** [Makefile:222: cmake_check_build_system] Error 1\n'}
+[0.608761] (software_training_assignment) CommandEnded: {'returncode': 2}
+[0.639226] (software_training_assignment) JobEnded: {'identifier': 'software_training_assignment', 'rc': 2}
+[0.649544] (-) EventReactorShutdown: {}

@@ -1,8 +1,0 @@
-#Request 
-std::tuple<double, double> position_absolute
----
-#Result
-double position_to_goal
----
-#Feedback
-double time_to_completion

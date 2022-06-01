@@ -27,9 +27,10 @@ find_package(rclcpp REQUIRED)
 include_directories(include)
 
 if(BUILD_TESTING)
-  find_package(ament_lint_auto REQUIRED catkan genmsg actionlib_msgs)
-  add_action_files(DIRECTORY action FILES moving_turtle.action)
-  generate_messages(DEPEDENCIES actionlib_msgs)
+  find_package(ament_lint_auto rosidl_default_generators catkan REQUIRED )
+  rosidl_generate_interfaces(${PROJECT_NAME}
+    "action/Moving.action"
+  )
   # the following line skips the linter which checks for copyrights
   # uncomment the line when a copyright and license is not present in all source files
   #set(ament_cmake_copyright_FOUND TRUE)

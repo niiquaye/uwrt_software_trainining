@@ -1,0 +1,8 @@
+#Request 
+float32[] waypoint_position_absolute
+---
+#Result
+float32[] position_to_goal
+---
+#Feedback
+float32[] time_to_completion

@@ -1,0 +1,13 @@
+CMake Error at CMakeLists.txt:30 (find_package):
+  find_package called with invalid argument "rosidl_default_generators"
+
+
+CMake Error at /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:93 (message):
+  rosidl_generate_interfaces() the passed file 'action/moving_turtle.action'
+  doesn't exist relative to the CMAKE_CURRENT_SOURCE_DIR
+  '/home/andrew/ros2_dev_ws/src/software_training_assignment'
+Call Stack (most recent call first):
+  CMakeLists.txt:31 (rosidl_generate_interfaces)
+
+
+make: *** [Makefile:222: cmake_check_build_system] Error 1

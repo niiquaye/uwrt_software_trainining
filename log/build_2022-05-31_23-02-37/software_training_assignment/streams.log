@@ -1,0 +1,61 @@
+[0.010s] Invoking command in '/home/andrew/ros2_dev_ws/src/software_training_assignment/build/software_training_assignment': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/andrew/ros2_dev_ws/src/software_training_assignment/build/software_training_assignment -- -j12 -l12
+[0.028s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.045s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.045s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.176s] -- Found rclcpp: 2.4.1 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.202s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.204s] -- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.314s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.351s] -- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.352s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.466s] CMake Error at CMakeLists.txt:30 (find_package):
+[0.466s]   find_package called with invalid argument "rosidl_default_generators"
+[0.466s] 
+[0.467s] 
+[0.486s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[0.612s] CMake Error at /opt/ros/foxy/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:60 (message):
+[0.612s]   execute_process(/usr/bin/python3 -m rosidl_adapter --package-name
+[0.612s]   software_training_assignment --arguments-file
+[0.612s]   /home/andrew/ros2_dev_ws/src/software_training_assignment/build/software_training_assignment/rosidl_adapter__arguments__software_training_assignment.json
+[0.612s]   --output-dir
+[0.612s]   /home/andrew/ros2_dev_ws/src/software_training_assignment/build/software_training_assignment/rosidl_adapter/software_training_assignment
+[0.612s]   --output-file
+[0.613s]   /home/andrew/ros2_dev_ws/src/software_training_assignment/build/software_training_assignment/rosidl_adapter/software_training_assignment.idls)
+[0.613s]   returned error code 1:
+[0.613s] 
+[0.613s]   Traceback (most recent call last):
+[0.613s] 
+[0.613s]     File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+[0.613s]       return _run_code(code, main_globals, None,
+[0.613s]     File "/usr/lib/python3.8/runpy.py", line 87, in _run_code
+[0.614s]       exec(code, run_globals)
+[0.614s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/__main__.py", line 19, in <module>
+[0.614s]       sys.exit(main())
+[0.614s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/main.py", line 53, in main
+[0.614s]       abs_idl_file = convert_to_idl(
+[0.614s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/__init__.py", line 29, in convert_to_idl
+[0.615s]       return convert_action_to_idl(
+[0.615s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/action/__init__.py", line 28, in convert_action_to_idl
+[0.615s]       action = parse_action_string(package_name, input_file.stem, content)
+[0.615s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 892, in parse_action_string
+[0.615s]       goal_message = parse_message_string(
+[0.615s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 540, in parse_message_string
+[0.615s]       msg = MessageSpecification(pkg_name, msg_name, fields, constants)
+[0.615s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 387, in __init__
+[0.615s]       self.base_type = BaseType(
+[0.616s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 204, in __init__
+[0.616s]       raise InvalidResourceName(
+[0.616s] 
+[0.616s]   rosidl_adapter.parser.InvalidResourceName: 'moving_turtle_Goal' is an
+[0.616s]   invalid message name.  It should have the pattern '^[A-Z][A-Za-z0-9]*$'
+[0.616s] 
+[0.616s] Call Stack (most recent call first):
+[0.616s]   /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)
+[0.616s]   CMakeLists.txt:31 (rosidl_generate_interfaces)
+[0.616s] 
+[0.616s] 
+[0.617s] -- Configuring incomplete, errors occurred!
+[0.617s] See also "/home/andrew/ros2_dev_ws/src/software_training_assignment/build/software_training_assignment/CMakeFiles/CMakeOutput.log".
+[0.617s] See also "/home/andrew/ros2_dev_ws/src/software_training_assignment/build/software_training_assignment/CMakeFiles/CMakeError.log".
+[0.620s] make: *** [Makefile:222: cmake_check_build_system] Error 1
+[0.622s] Invoked command in '/home/andrew/ros2_dev_ws/src/software_training_assignment/build/software_training_assignment' returned '2': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/andrew/ros2_dev_ws/src/software_training_assignment/build/software_training_assignment -- -j12 -l12
