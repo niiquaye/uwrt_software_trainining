@@ -1,9 +1,0 @@
-CMake Error at CMakeLists.txt:30 (find_package):
-  find_package called with invalid argument "rosidl_default_generators"
-
-
-CMake Error at CMakeLists.txt:31 (rosidl_genereate_interfaces):
-  Unknown CMake command "rosidl_genereate_interfaces".
-
-
-make: *** [Makefile:222: cmake_check_build_system] Error 1
