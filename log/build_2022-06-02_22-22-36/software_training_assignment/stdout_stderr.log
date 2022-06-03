@@ -1,8 +1,0 @@
-CMake Error at CMakeLists.txt:40:
-  Parse error.  Expected a command name, got unquoted argument with text ";".
-
-
--- Configuring incomplete, errors occurred!
-See also "/home/andrew/ros2_dev_ws/src/uwrt_software_training/build/software_training_assignment/CMakeFiles/CMakeOutput.log".
-See also "/home/andrew/ros2_dev_ws/src/uwrt_software_training/build/software_training_assignment/CMakeFiles/CMakeError.log".
-make: *** [Makefile:558: cmake_check_build_system] Error 1
