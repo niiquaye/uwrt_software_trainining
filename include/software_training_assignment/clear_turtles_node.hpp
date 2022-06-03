@@ -3,8 +3,8 @@
 //get all turtle names and request to kill each one
 //make a request to the turtle killing service
 
-#include <rclcpp/rclrpp.hpp>
-#include <turtlesim/srv/Kill.hpp>
+#include <rclcpp/rclcpp.hpp>
+#include <turtlesim/srv/kill.hpp>
 #include <cstdlib>
 
 

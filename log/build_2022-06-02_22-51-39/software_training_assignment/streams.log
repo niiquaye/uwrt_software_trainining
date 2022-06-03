@@ -1,0 +1,12 @@
+[0.013s] Invoking command in '/home/andrew/ros2_dev_ws/src/uwrt_software_training/build/software_training_assignment': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/andrew/ros2_dev_ws/src/uwrt_software_training/build/software_training_assignment -- -j12 -l12
+[0.045s] [35m[1mScanning dependencies of target turtle_request[0m
+[0.073s] [ 50%] [32mBuilding CXX object CMakeFiles/turtle_request.dir/src/clear_turtles_node.cpp.o[0m
+[0.159s] In file included from [01m[K/home/andrew/ros2_dev_ws/src/uwrt_software_training/src/clear_turtles_node.cpp:1[m[K:
+[0.159s] [01m[K/home/andrew/ros2_dev_ws/src/uwrt_software_training/src/../include/software_training_assignment/clear_turtles_node.hpp:7:10:[m[K [01;31m[Kfatal error: [m[Kturtlesim/srv/Kill.hpp: No such file or directory
+[0.159s]     7 | #include [01;31m[K<turtlesim/srv/Kill.hpp>[m[K
+[0.160s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.160s] compilation terminated.
+[0.160s] make[2]: *** [CMakeFiles/turtle_request.dir/build.make:63: CMakeFiles/turtle_request.dir/src/clear_turtles_node.cpp.o] Error 1
+[0.160s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/turtle_request.dir/all] Error 2
+[0.161s] make: *** [Makefile:141: all] Error 2
+[0.163s] Invoked command in '/home/andrew/ros2_dev_ws/src/uwrt_software_training/build/software_training_assignment' returned '2': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/andrew/ros2_dev_ws/src/uwrt_software_training/build/software_training_assignment -- -j12 -l12
