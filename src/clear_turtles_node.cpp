@@ -15,12 +15,12 @@ void clear_turtles_node::kill() {
         //first check if the turtle exists
         //then delete the turtle
         //make requests i guess
-        sharedReq = std::make_shared<rclcpp::Client<turtlesim::srv::Kill>::SharedRequest> (turtle);
+        sharedReq{std::make_shared<rclcpp::Client<turtlesim::srv::Kill>::SharedRequest> (turtle)};
         //need a callback function
 
         auto callback = []{
             std::cout << "finished" << std::endl;
-        }
+        };
         
         client -> async_send_request(sharedReq, callback);
     }
