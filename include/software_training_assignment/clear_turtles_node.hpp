@@ -15,9 +15,7 @@ class clear_turtles_node : public rclcpp::Node{
         clear_turtles_node(const rclcpp::NodeOptions &options);
 
     private:
-        
-        rclcpp::Client<turtlesim::srv::Kill>* client;
-        rclcpp::Client<turtlesim::srv::Kill>::SharedRequest sharedReq; //shared request
+        rclcpp::Client<turtlesim::srv::Kill>::SharedPtr client; //shared request
         std::vector<std::string> nodes = {"turtle1", "moving_turtle", "stationary_turtle"};
         rclcpp::TimerBase::SharedPtr timer_;
         void kill();

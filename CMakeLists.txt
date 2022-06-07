@@ -30,10 +30,12 @@ find_package(geometry_msgs REQUIRED)
 #include the 'include' directory
 include_directories(include)
 
-#add clear_turtles_node
+# add clear_turtles_node
 add_library(turtle_request SHARED 
           src/clear_turtles_node.cpp)
+          
 target_compile_definitions(turtle_request PRIVATE "COMPOSITION_BUILDING_DLL")
+
 ament_target_dependencies(turtle_request
 "rclcpp"
 "rclcpp_components"
@@ -41,6 +43,9 @@ ament_target_dependencies(turtle_request
 "std_msgs")   
 rclcpp_components_register_nodes(turtle_request "composition::turtle_service_request_node")
 
+install(TARGETS
+  turtle_request
+  DESTINATION lib/${PROJECT_NAME})
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

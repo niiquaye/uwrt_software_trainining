@@ -2,10 +2,12 @@
 
 using namespace composition;
 
-clear_turtles_node::clear_turtles_node(const rclcpp::NodeOptions &options) {
-    client = create_client<turtlesim::srv::Kill>("/kill");
+clear_turtles_node::clear_turtles_node(const rclcpp::NodeOptions &options) : Node("clear_turtles_node") {
+    
+    client = this -> create_client<turtlesim::srv::Kill>("kill");
 
-    timer_cb = create_wall_timer(2s, std::bind(kill, this));
+    timer_ = create_wall_timer(std::chrono::duration<int, std::chrono::seconds::period>(1), std::bind(&clear_turtles_node::kill, this));
+   
 }
 
 void clear_turtles_node::kill() {
@@ -15,14 +17,15 @@ void clear_turtles_node::kill() {
         //first check if the turtle exists
         //then delete the turtle
         //make requests i guess
-        sharedReq{std::make_shared<rclcpp::Client<turtlesim::srv::Kill>::SharedRequest> (turtle)};
+        auto request = std::make_shared<turtlesim::srv::Kill::Request>();
         //need a callback function
 
-        auto callback = []{
+        auto callback = [this](rclcpp::Client<turtlesim::srv::Kill>::SharedFuture response) -> void {
             std::cout << "finished" << std::endl;
+            rclcpp::shutdown();
         };
         
-        client -> async_send_request(sharedReq, callback);
+        client -> async_send_request(request, callback);
     }
 
 }
