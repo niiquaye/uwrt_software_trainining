@@ -16,7 +16,7 @@ void clear_turtles_node::kill() {
         //send a kill request to turtlesim for each turtle name
         //first check if the turtle exists
         //then delete the turtle
-        //make requests i guess
+        //make requests I guess
         auto request = std::make_shared<turtlesim::srv::Kill::Request>();
         //need a callback function
 
