@@ -43,8 +43,21 @@ ament_target_dependencies(turtle_request
 "std_msgs")   
 rclcpp_components_register_nodes(turtle_request "composition::turtle_service_request_node")
 
+#add reset_turtle_node
+add_library(turtle_reset_request SHARED
+            src/reset_turtle_node.cpp)
+
+ament_target_dependencies(turtle_reset_request
+"rclcpp"
+"rclcpp_components"
+"turtlesim"
+"std_msgs")   
+rclcpp_components_register_nodes(turtle_reset_request "composition::turtle_service_request_node")
+
+
 install(TARGETS
   turtle_request
+  turtle_reset_request
   DESTINATION lib/${PROJECT_NAME})
 
 if(BUILD_TESTING)
