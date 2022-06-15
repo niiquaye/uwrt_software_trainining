@@ -2,9 +2,9 @@
 
 using namespace composition;
 
-reset_turtle_node::reset_turtle_node(const rclcpp::NodeOptions &options) {
+reset_turtle_node::reset_turtle_node(const rclcpp::NodeOptions &options) : Node("reset_turtle_node"){
     client_ = this -> create_client<turtlesim::srv::TeleportAbsolute>("reset_moving_turtle");
-    service_ = this -> create_service<std_srvs::srv::Empty>("reset_moving_turtle", &reset_moving_turtle); //pass it a reference to a funciton
+    service_ = this -> create_service<software_training_assignment::srv::Software::Request>("reset_moving_turtle", &reset_moving_turtle); //pass it a reference to a funciton
 }
 void reset_turtle_node::reset_moving_turtle() {
     //call turtlesim teleport absolute
