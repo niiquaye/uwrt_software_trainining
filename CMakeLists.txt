@@ -63,9 +63,45 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   DEPENDENCIES std_msgs geometry_msgs builtin_interfaces
 )
 
+
+add_library(circular_turtle_request SHARED
+            src/circular_turtle_node.cpp)
+ament_target_dependencies(circular_turtle_request
+"rclcpp"
+"rclcpp_components"
+"turtlesim"
+"std_msgs")
+rclcpp_components_register_nodes(circular_turtle_request "composition::circular_turtle_node")
+
+
+add_library(spawn_turtle_request SHARED
+            src/spawn_turtle_node.cpp)
+ament_target_dependencies(spawn_turtle_request
+"rclcpp"
+"rclcpp_components"
+"turtlesim"
+"std_msgs")
+rclcpp_components_register_nodes(circular_turtle_request "composition::spawn_turtle_node")
+
+
+add_library(turtle_distance_request SHARED
+            src/turtle_distance_node.cpp)
+ament_target_dependencies(turtle_distance_request
+"rclcpp"
+"rclcpp_components"
+"turtlesim"
+"std_msgs")
+rclcpp_components_register_nodes(turtle_distance_request "composition::turtle_distance_node")
+
+
+
+
 install(TARGETS
   turtle_request
   turtle_reset_request
+  circular_turtle_request
+  turtle_distance_request
+  spawn_turtle_request
   DESTINATION lib/${PROJECT_NAME})
 
 if(BUILD_TESTING)
