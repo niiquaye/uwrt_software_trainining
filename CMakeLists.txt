@@ -70,18 +70,19 @@ ament_target_dependencies(circular_turtle_request
 "rclcpp"
 "rclcpp_components"
 "turtlesim"
-"std_msgs")
+"std_msgs"
+"geometry_msgs")
 rclcpp_components_register_nodes(circular_turtle_request "composition::circular_turtle_node")
 
 
 add_library(spawn_turtle_request SHARED
-            src/spawn_turtle_node.cpp)
+            src/spawn_turtles_node.cpp)
 ament_target_dependencies(spawn_turtle_request
 "rclcpp"
 "rclcpp_components"
 "turtlesim"
 "std_msgs")
-rclcpp_components_register_nodes(circular_turtle_request "composition::spawn_turtle_node")
+rclcpp_components_register_nodes(circular_turtle_request "composition::spawn_turtles_node")
 
 
 add_library(turtle_distance_request SHARED
@@ -92,8 +93,6 @@ ament_target_dependencies(turtle_distance_request
 "turtlesim"
 "std_msgs")
 rclcpp_components_register_nodes(turtle_distance_request "composition::turtle_distance_node")
-
-
 
 
 install(TARGETS

@@ -5,27 +5,30 @@
 #include <rclcpp.hpp>
 #include <cstdlib>
 
-class Vel_msg {
-    class Velocity {
-        private:
-            _Float64 x,
-            _Float64 y,
-            _Float64 z
-    }
-    public:
-       Velocity linear;
-       Velocity angular; 
-        
-}
-
-class circular_turtle : public rclcpp:Node {
+class circular_turtle : public rclcpp::Node {
     public: 
         circular_turtle(const rclcpp::NodeOptions &options);
     private:
-        rclcpp::timer::WallTimer timer_cb;
-        rclcpp::Publisher<geometry_msgs::msg::Twist>* publisher;
+        rclcpp::TimerBase::SharedPtr timer_;
+        rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr publisher;
         //need to figure out how to publish a message to turtle1 outlining its angular velocity and all that
-        Vel_msg Vel_msg;
+        typedef struct point {
 
-}
+            typedef struct linear {
+            static constexpr float x = 12;
+            static constexpr float y = 12;
+            static constexpr float z = 12;
+            } linear;
+
+            typedef struct angular {
+            static constexpr float x = 1.41;
+            static constexpr float y = 1.41;
+            static constexpr float z = 1.41;
+
+            } angular;
+
+        } coordinates;
+        void rotate();
+
+};
 
