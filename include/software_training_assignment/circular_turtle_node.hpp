@@ -4,8 +4,8 @@
 
 #include <rclcpp.hpp>
 #include <cstdlib>
-
-class circular_turtle : public rclcpp::Node {
+namespace composition{
+    class circular_turtle : public rclcpp::Node {
     public: 
         circular_turtle(const rclcpp::NodeOptions &options);
     private:
@@ -31,4 +31,6 @@ class circular_turtle : public rclcpp::Node {
         void rotate();
 
 };
+}
+
 
