@@ -1,13 +1,13 @@
 #include <cstdlib>
-#include <rclcpp>
-#include <turtlesim/srv/Spawn>
+#include <rclcpp/rclcpp.hpp>
+#include <turtlesim/srv/spawn.hpp>
 
 class spawn_turtles : public rclcpp::Node {
 private:
     /* data */
-    rclcpp::Client<turtlesim::srv::Spawn>* client;
-    rclcpp::Client<turtlesim::srv::Spawn>::sharedRequest* sharedRequest;
-    rclcpp::timer::WallTimer timer_cb;
+    rclcpp::Client<turtlesim::srv::Spawn>::SharedPtr client;
+    
+    rclcpp::TimerBase::SharedPtr timer_;
     void spawn();
     
 public:
