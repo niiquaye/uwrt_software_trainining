@@ -3,8 +3,8 @@
 using namespace composition;
 
 reset_turtle_node::reset_turtle_node(const rclcpp::NodeOptions &options) : Node("reset_turtle_node"){
-    client_ = this -> create_client<turtlesim::srv::TeleportAbsolute>("reset_moving_turtle");
-    service_ = this -> create_service<software_training_assignment::srv::Software::Request>("reset_moving_turtle", &reset_moving_turtle); //pass it a reference to a funciton
+    client_ = this -> create_client<turtlesim::srv::TeleportAbsolute>("/moving_turtle/teleport_absolute");
+    service_ = this -> create_service<software_training_assignment::srv::Software::Request>("/reset_moving_turtle", &reset_moving_turtle); //pass it a reference to a funciton
 }
 void reset_turtle_node::reset_moving_turtle() {
     //call turtlesim teleport absolute
@@ -12,12 +12,17 @@ void reset_turtle_node::reset_moving_turtle() {
 }
 
 void reset_turtle_node::reset() {
-    auto request = std::make_shared<rclcpp::srv::TeleportAbsolute>(25, 25, 0, "moving_turtle"); // how do i interact with turtleX lol the documentation doesn't take a name as  input
+
+    auto request = std::make_shared<rclcpp::srv::TeleportAbsolute>(); // how do i interact with turtleX lol the documentation doesn't take a name as  input
+    request -> x = 25;
+    request -> y = 25;
+    request -> theta = 0;
+    
     auto callback = [this](rclcpp::Client<turtlesim::srv::TeleportAbsolute>::SharedFuture response) -> { 
-        response.wait();
-        //send response based on shared future state
-        if(response.get().)
-       rclcpp::shutdown();
+       
+       RCLCPP_INFO(this->get_logger(), "Turtle Moved");
     };
-    client_ -> async_send_request(request, callback);
+    auto result = client_ -> async_send_request(request, callback);
+    response -> success = true;
+    
 }

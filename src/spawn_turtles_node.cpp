@@ -9,7 +9,7 @@ void spawn_turtles::spawn() {
     //make stationary turtle
     shared_request = std::make_shared<rclcpp::Client<rclcpp::srv::Spawn>::SharedRequest> (5, 5, 0, "stationary_turtle");
 
-    auto callbackFunction1 = [] -> {
+    auto callbackFunction1 = [this] -> {
         std::cout << "callback1" << std::endl;
         shared_request = std::make_shared<rclcpp::Client<rclcpp::srv::Spawn>::SharedRequest> (25, 25, 0, "moving_turtle");
         client -> async_send_request(shared_request, callbackFunction2)
