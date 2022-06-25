@@ -2,22 +2,31 @@
 
     
 spawn_turtles::spawn_turtles(const rclcpp::NodeOptions &options) {
-    timer_cb = create_wall_timer(2s, std::bind(spawn, this));
+    timer_ = create_wall_timer(std::chrono::duration<int, std::chrono::seconds::period>(1), std::bind(&spawn_turtles::spawn, this));
 }
 
 void spawn_turtles::spawn() {
     //make stationary turtle
-    shared_request = std::make_shared<rclcpp::Client<rclcpp::srv::Spawn>::SharedRequest> (5, 5, 0, "stationary_turtle");
+    client = this -> create_client<turtlesim::srv::Spawn> ("spawn");
+    auto request1 = std::make_shared<turtlesim::srv::Spawn>();
+    request1 -> x = 25;
+    request1 -> y = 25;
+    request1 -> theta = 0;
+    request1-> name = "moving_turtle";
+    auto request2 = std::make_shared<turtlesim::srv::Spawn>();
+    request2->x = 25;
+    request2->y = 25;
+    request2->theta = 0;
+    request2->name = "stationary_turtle";
 
-    auto callbackFunction1 = [this] -> {
-        std::cout << "callback1" << std::endl;
-        shared_request = std::make_shared<rclcpp::Client<rclcpp::srv::Spawn>::SharedRequest> (25, 25, 0, "moving_turtle");
-        client -> async_send_request(shared_request, callbackFunction2)
-    }
-    auto callbackFunction2 = [] -> {
-        std::cout << "callback2" << std::endl;
-    }
-    client -> async_send_request(shared_request, callbackFunction1);
+    auto callbackFunction1 = [this](rclcpp::Client<turtlesim::srv::Spawn>::SharedFuture response) -> void{
+        std::cout << "sent moving_turtle"
+    };
+    auto callbackFunction2 = [this](rclcpp::Client<turtlesim::srv::Spawn>::SharedFuture response) -> void{
+        std::cout << "send stationary turtle" << std::endl;
+    };
+    client -> async_send_request(request1, callbackFunction1);
+    client -> async_send_request(request2, callbackFunction2);
 
     
 

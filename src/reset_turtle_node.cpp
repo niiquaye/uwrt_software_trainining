@@ -13,7 +13,7 @@ void reset_turtle_node::reset_moving_turtle() {
 
 void reset_turtle_node::reset() {
 
-    auto request = std::make_shared<rclcpp::srv::TeleportAbsolute>(); // how do i interact with turtleX lol the documentation doesn't take a name as  input
+    auto request = std::make_shared<turtlesim::srv::TeleportAbsolute>(); // how do i interact with turtleX lol the documentation doesn't take a name as  input
     request -> x = 25;
     request -> y = 25;
     request -> theta = 0;
