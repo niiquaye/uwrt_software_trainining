@@ -59,9 +59,12 @@ rclcpp_components_register_nodes(turtle_reset_request "composition::turtle_servi
 
 
 rosidl_generate_interfaces(${PROJECT_NAME}
-  "srv/Software.srv"
+"msg/Software.msg"
+"srv/Software.srv"
+"action/Software.action"
   DEPENDENCIES std_msgs geometry_msgs builtin_interfaces
 )
+ament_export_dependencies(rosidl_default_runtime)
 
 
 add_library(circular_turtle_request SHARED
@@ -91,8 +94,19 @@ ament_target_dependencies(turtle_distance_request
 "rclcpp"
 "rclcpp_components"
 "turtlesim"
-"std_msgs")
+"std_msgs"
+"geometry_msgs")
 rclcpp_components_register_nodes(turtle_distance_request "composition::turtle_distance_node")
+
+add_library(moving_turtle_action_node SHARED
+            src/moving_turtle_action_node.cpp)
+ament_target_dependencies(moving_turtle_action_node
+"rclcpp"
+"rclcpp_components"
+"turtlesim"
+"std_msgs"
+"geometry_msgs")
+rclcpp_components_register_nodes(moving_turtle_action_node "composition::moving_turtle_action_node")
 
 
 install(TARGETS
