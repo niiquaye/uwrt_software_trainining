@@ -1,7 +1,7 @@
 #include "../include/software_training_assignment/spawn_turtles_node.hpp"
 
     
-spawn_turtles::spawn_turtles(const rclcpp::NodeOptions &options) {
+spawn_turtles::spawn_turtles(const rclcpp::NodeOptions &options) : Node("spawn_turtles_node") {
     timer_ = create_wall_timer(std::chrono::duration<int, std::chrono::seconds::period>(1), std::bind(&spawn_turtles::spawn, this));
 }
 
