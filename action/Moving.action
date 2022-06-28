@@ -1,8 +1,14 @@
-#Request 
-float32[] waypoint_position_absolute
+
+# Goal Request /moving_turtle/cmd_vel
+geometry_msgs/Vector3 linear_pos 
+geometry_msgs/Vector3 angular_pos
+
+# Result - time
 ---
-#Result
-float32[] position_to_goal
+int64 duration
+ 
 ---
-#Feedback
-float32[] time_to_completion
+# Feedback /moving_turtle/pose
+float32 x_pos 
+float32 y_pos
+float32 theta_pos

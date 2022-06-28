@@ -2,8 +2,6 @@
 
 using namespace composition;
 turtle_distance_node::turtle_distance_node(const rclcpp::NodeOptions &options) : Node("turtle_distance_node") {
-
-
     //need to subscribe to pose for turtle 
     auto callback1 =  [this](const turtlesim::msg::Pose::SharedPtr msg) -> void {
         this -> turtle1_x = msg -> x;
@@ -15,7 +13,7 @@ turtle_distance_node::turtle_distance_node(const rclcpp::NodeOptions &options) :
     };
     auto subscription_1 = this -> create_subscription<turtlesim::msg::Pose>("moving_turtle/pose", 10, callback1);
     auto subscription_2 = this -> create_subscription<turtlesim::msg::Pose>("stationary_turtle/pose", 10, callback2);
-    
+
     auto publisher_callback = [this]() -> void {
       float x{abs(this ->turtle1_x - this -> turtle2_x)};
       float y{abs(this ->turtle1_y - this -> turtle2_y)};
